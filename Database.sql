@@ -498,6 +498,15 @@ SELECT tickets.price AS prix, CONCAT(clients.lastName," ", clients.firstName) AS
 --Vérification point FAQ: D'un point de vue back office, qui pourra inscrire les séances?
 SELECT CONCAT(admins.lastName," ", admins.firstName) AS admin, cinemas.name AS cinema FROM admins LEFT JOIN cinemas ON admins.cinema_Id = cinemas.id;
 
+--Suppréssion des insertion test
+TRUNCATE TABLE cinemas;
+TRUNCATE TABLE admins;
+TRUNCATE TABLE movies;
+TRUNCATE TABLE cinemas_movies;
+TRUNCATE TABLE rooms;
+TRUNCATE TABLE sessions;
+TRUNCATE TABLE clients;
+TRUNCATE TABLE tickets;
 
 --Sauvegarde de la bdd
-mysqldump -u root -B cinema > bdd.sql;
+mysqldump -h 127.0.0.1 -u root -B cinema > bdd.sql;
