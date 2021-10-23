@@ -500,4 +500,4 @@ SELECT CONCAT(admins.lastName," ", admins.firstName) AS admin, cinemas.name AS c
 
 
 --Sauvegarde de la bdd
-mysqldump -u root -h 127.0.0.1 > bdd.sql;
+mysqldump -u root -B cinema > bdd.sql;
